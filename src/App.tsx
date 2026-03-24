@@ -50,16 +50,16 @@ export default function App() {
   };
 
   const socialLinks = [
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Youtube, href: "#", label: "YouTube" },
-    { icon: XIcon, href: "#", label: "X (Twitter)" },
-    { icon: TelegramIcon, href: "#", label: "Telegram", iconClass: "-ml-1 mt-1" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: Instagram, href: "https://www.instagram.com/aniket_visuals/", label: "Instagram" },
+    { icon: Youtube, href: "https://www.youtube.com/@aniket_visuals", label: "YouTube" },
+    { icon: XIcon, href: "https://x.com/Ankitxed", label: "X (Twitter)" },
+    { icon: TelegramIcon, href: "https://t.me/aniketvisuals", label: "Telegram", iconClass: "-ml-1 mt-1" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/aniketvisuals/", label: "LinkedIn" },
   ];
 
   const mainLinks = [
-    { title: "PORTFOLIO", icon: Play, href: "#", primary: true },
-    { title: "CONTACT ME", icon: Mail, href: "#" },
+    { title: "PORTFOLIO", icon: Play, href: "https://editorsraj.vercel.app/", primary: true },
+    { title: "CONTACT ME", icon: Mail, href: "https://t.me/aniket_visuals" },
     { title: "ABOUT ME", icon: User, href: "#" },
   ];
 
