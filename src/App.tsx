@@ -1,4 +1,3 @@
-import { motion } from 'motion/react';
 import { Instagram, Youtube, Star, ArrowRight, Play, Mail, User, Linkedin } from 'lucide-react';
 
 const XIcon = ({ className }: { className?: string }) => (
@@ -24,31 +23,6 @@ const TelegramIcon = ({ className }: { className?: string }) => (
 );
 
 export default function App() {
-  // Animation variants
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
-      y: 0,
-      transition: {
-        type: "spring",
-        stiffness: 300,
-        damping: 24,
-      }
-    },
-  };
-
   const socialLinks = [
     { icon: Instagram, href: "https://www.instagram.com/aniket_visuals/", label: "Instagram" },
     { icon: Youtube, href: "https://www.youtube.com/@aniket_visuals", label: "YouTube" },
@@ -77,16 +51,11 @@ export default function App() {
       {/* Main Content */}
       <main className="relative z-10 w-full max-w-[420px] mx-auto px-5 py-16 flex flex-col items-center">
         
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={containerVariants}
-          className="w-full flex flex-col items-center"
-        >
+        <div className="w-full flex flex-col items-center">
           {/* Header Section */}
-          <motion.div variants={itemVariants} className="flex flex-col items-center mb-8">
-            <div className="relative mb-6">
-              <div className="absolute inset-0 rounded-full bg-gold-start/20 blur-xl animate-pulse" />
+          <div className="flex flex-col items-center mb-8 animate-slide-down-elastic">
+            <div className="relative mb-6 animate-float">
+              <div className="absolute inset-0 rounded-full bg-gold-start/20 blur-xl animate-blink" />
               <div className="logo-glass relative z-10">
                 <img 
                   src="https://res.cloudinary.com/df5rgwdng/image/upload/v1774265974/Untitled-03-01-01_omqlkj.jpg" 
@@ -100,10 +69,10 @@ export default function App() {
             <h1 className="text-4xl font-bold tracking-widest mb-2 text-liquid-glass">
               ANIKET RAJ
             </h1>
-          </motion.div>
+          </div>
 
           {/* Social Icons Row */}
-          <motion.div variants={itemVariants} className="flex gap-4 mb-10">
+          <div className="flex gap-4 mb-10 animate-pop-elastic" style={{ animationFillMode: 'both', animationDelay: '0.2s' }}>
             {socialLinks.map((link, index) => (
               <a 
                 key={index} 
@@ -114,10 +83,10 @@ export default function App() {
                 <link.icon className={`w-5 h-5 text-text-secondary group-hover:text-white transition-colors ${link.iconClass || ''}`} />
               </a>
             ))}
-          </motion.div>
+          </div>
 
           {/* Main Link Buttons Section */}
-          <motion.div variants={itemVariants} className="w-full flex flex-col gap-4 mb-10">
+          <div className="w-full flex flex-col gap-4 mb-10 animate-slide-up-elastic" style={{ animationFillMode: 'both', animationDelay: '0.4s' }}>
             {mainLinks.map((link, index) => (
               <a
                 key={index}
@@ -135,9 +104,9 @@ export default function App() {
                 <ArrowRight className="w-5 h-5 text-white/30 group-hover:text-white/70 transition-colors transform group-hover:translate-x-1" />
               </a>
             ))}
-          </motion.div>
+          </div>
 
-        </motion.div>
+        </div>
       </main>
     </div>
   );
