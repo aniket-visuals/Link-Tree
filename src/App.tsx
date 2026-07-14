@@ -33,7 +33,7 @@ export default function App() {
 
   const mainLinks = [
     { title: "PORTFOLIO", icon: Play, href: "https://editorsraj.vercel.app/", primary: true },
-    { title: "MY STORE", icon: ShoppingBag, href: "https://editorshubstore.vercel.app/" },
+    { title: "MY STORE", icon: ShoppingBag, href: "https://www.editorshubstore.in/" },
     { title: "CONTACT ME", icon: Mail, href: "https://t.me/aniket_visuals" },
   ];
 
